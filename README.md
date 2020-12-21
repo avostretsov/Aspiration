@@ -5,7 +5,7 @@ npm install
 ```
 
 
-# Running the Sample Scenarios
+# Running webdriverio tests
 
 ```
 npm run test
