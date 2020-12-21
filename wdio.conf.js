@@ -6,8 +6,8 @@ const { removeSync } = require('fs-extra');
 // The below module is used for cucumber html report generation
 const reporter = require('cucumber-html-reporter');
 const currentTime = new Date().toJSON().replace(/:/g, "-");
-const sourceSpecDirectory = `tests/features/featureFiles`;
-const jsonTmpDirectory = `tests/reports/json/tmp/`;
+const sourceSpecDirectory = `tests/e2e/features/featureFiles`;
+const jsonTmpDirectory = `tests/e2e/reports/json/tmp/`;
 
 
 let featureFilePath = `${sourceSpecDirectory}/*.feature`;
@@ -164,7 +164,7 @@ exports.config = {
     //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
-        require: ['./tests/features/step_definitions/*.js', './tests/features/support/*.js'],        // <string[]> (file/dir) require files before executing features
+        require: ['./tests/e2e/features/step_definitions/*.js', './tests/e2e/features/support/*.js'],        // <string[]> (file/dir) require files before executing features
         backtrace: false,   // <boolean> show full backtrace for errors
         requireModule: [],  // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
         dryRun: false,      // <boolean> invoke formatters without executing steps
@@ -320,7 +320,7 @@ exports.config = {
             var options = {
                 theme: 'bootstrap',
                 jsonFile: jsonFile,
-                output: `tests/reports/html/report-${currentTime}.html`,
+                output: `tests/e2e/reports/html/report-${currentTime}.html`,
                 reportSuiteAsScenarios: true,
                 scenarioTimestamp: true,
                 launchReport: true,
