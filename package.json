@@ -4,7 +4,9 @@
   "description": "Aspiration QA Challenge",
   "main": "index.js",
   "scripts": {
-    "test": "npx wdio wdio.conf.js --parallel=false"
+    "test": "npx wdio wdio.conf.js --parallel=false",
+    "api-test": "bin/rspec tests/api/api-test.rb",
+    "all-tests": "npx wdio wdio.conf.js --parallel=false && bin/rspec tests/api/api-test.rb"
   },
   "repository": {
     "type": "git",

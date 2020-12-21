@@ -1,12 +1,25 @@
 # Installation
 
 ```
-npm install
+$ npm install
+$ bundle install
 ```
 
 
-# Running webdriverio tests
+# Running e2e tests
 
 ```
-npm run test
+$npm test
+```
+
+# Running api tests
+
+```
+$npm run api-test
+```
+
+# Running all tests
+
+```
+$npm run all-tests
 ```
