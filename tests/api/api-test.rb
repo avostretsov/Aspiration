@@ -14,7 +14,7 @@ RSpec.describe 'GET request to /posts endpoint' do
     expect(@resp.headers['Content-Type']).to eql('application/json; charset=utf-8')
   end
   it 'should not have empty response body' do
-    expect(@resp.body).not_to be([])
+    expect(@data).not_to be([])
   end
   it 'should include "qui est esse title" in response body' do
     expect(@resp.body).to include( '"title": "qui est esse"')
@@ -26,6 +26,3 @@ RSpec.describe 'GET request to /posts endpoint' do
     expect(@data[-1]['id']).to eql(100)
   end
 end
-
-
-
