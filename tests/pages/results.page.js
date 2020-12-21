@@ -1,7 +1,5 @@
 const NativePage = require('./native.page')
-const googlePageData = require('../files/testData/google.data')
-
-class GooglePage extends NativePage {
+class ResultsPage extends NativePage {
 
   get searchField() {
     return $('.gLFyf.gsfi')
@@ -15,9 +13,9 @@ class GooglePage extends NativePage {
   }
   searchDucks() {
     this.searchField.click()
-    this.searchField.setValue(googlePageData['searchQuery'])
+    this.searchField.setValue('ducks')
     this.googleSearchBtn.click()
   }
 }
 
-module.exports = GooglePage
+module.exports = ResultsPage

@@ -5,4 +5,4 @@ Feature: Validate the Search functionality of Google site
 
     Given I am on the Google site
     When I search for the ducks keyword
-    Then I should get redirected to the ducks Page
+    Then I should get redirected to the ducks results page
